@@ -78,7 +78,7 @@ function Home({ setCurrentPage }) {
         <div className="fun-fact-card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <h3>Did You Know? 🤔</h3>
+              <h3>Did You Know?🤔</h3>
               <p>Click to find out!</p>
             </div>
             <div className="flip-card-back">
