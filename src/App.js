@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
      <nav className="nav-bar">
-  <div className="nav-brand">GiveHub♥︎</div>
+  <div className="nav-brand">GiveHub♥︎ </div>
   <div className="nav-links">
     <button onClick={() => setCurrentPage('home')}>Home</button>
     <button className="donate-btn">

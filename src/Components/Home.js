@@ -131,7 +131,7 @@ function Home({ setCurrentPage }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2025 GiveHub. All rights reserved.</p>
+          <p>&copy; 2025 GiveHub All rights reserved.</p>
         </div>
       </footer>
     </div>
