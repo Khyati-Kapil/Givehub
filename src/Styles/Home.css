@@ -710,7 +710,7 @@ background: radial-gradient(circle, rgba(238, 174, 202, 0.59) 0%, rgba(148, 187,
 
 @media (max-width: 768px) {
   .hero {
-    padding: 41px 20px;
+    padding: 40px 20px;
   }
 
   .hero h1 {

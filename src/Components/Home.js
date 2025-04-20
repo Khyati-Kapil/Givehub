@@ -16,7 +16,7 @@ function Home({ setCurrentPage }) {
   <span className="corner-label">Clothes</span>
 </div>
 <div className="corner-deco corner-tr">
-  <img src={Food} alt="Clothes" className="corner-img" />
+  <img src={Food} alt="Clothes"className="corner-img" />
   <span className="corner-label">Food</span>
 </div>
 <div className="corner-deco corner-bl">
