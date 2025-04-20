@@ -90,6 +90,7 @@ function Home({ setCurrentPage }) {
       
       <div className="features">
         <div className="feature-card">
+          
           <h3>How It Works</h3>
           <ul>
             <li>Select items to donate</li>

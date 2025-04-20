@@ -11,7 +11,7 @@ function App() {
         return <Home setCurrentPage={setCurrentPage} />;
   
       default:
-        return <Home />;
+        return <Home />; 
     }
   };
 
