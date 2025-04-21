@@ -103,7 +103,7 @@ const handleImage=(e)=>{
           )}
         </div>
         <button type="submit">Submit</button>
-        <button type="submit">Submit Donation</button>
+        
       </form>
     </div>
   );
