@@ -353,6 +353,34 @@ html, body {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+  height: 350px;
+  margin-bottom: 10%;
+}
+
+.track {
+  display: flex;
+  width: calc(200%); 
+  animation: scroll 20s linear infinite;
+}
+
+.track img {
+  width: 25%; 
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 .info-box:hover .particle-burst {
   opacity: 1;
@@ -362,7 +390,6 @@ html, body {
 .info-box {
   background: rgba(255, 255, 255, 0.95);
   padding: 30px;
-  border-radius: 15px;
   text-align: center;
   transition: transform 0.3s ease;
   animation: fadeIn 0.6s ease both;

@@ -4,6 +4,10 @@ import cloud from './cloud.png';
 import clothes from './clothes.png';
 import toys from './toys.png';
 import Food from './Food.png';
+import car from './Carousel.avif'
+import car1 from './Carousel1.jpg'
+import car3 from './Carousel3.jpg'
+import car2 from './Carousel2.jpg'
 
 
 function Home({ setCurrentPage }) {
@@ -35,6 +39,7 @@ function Home({ setCurrentPage }) {
     </button>
   </div>
 </div>
+     
       
       <div className="info-boxes">
         <div className="info-box bounce-hover">
@@ -110,7 +115,19 @@ function Home({ setCurrentPage }) {
           </ul>
         </div>
       </div>
-
+      <div class="carousel">
+          <div class="track">
+          <img src= {car1} alt="1" />
+            <img src= {car} alt="2" />
+            <img src= {car2} alt="3" />
+            <img src= {car3} alt="4" />
+          
+            <img src={car} alt="1 duplicate" />
+            <img src={car1} alt="2 duplicate" />
+            <img src={car2} alt="3 duplicate" />
+            <img src={car3} alt="4 duplicate" />
+          </div>
+        </div>
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
