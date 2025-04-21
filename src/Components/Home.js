@@ -4,43 +4,53 @@ import cloud from './cloud.png';
 import clothes from './clothes.png';
 import toys from './toys.png';
 import Food from './Food.png';
-import car from './Carousel.avif'
-import car1 from './Carousel1.jpg'
-import car3 from './Carousel3.jpg'
-import car2 from './Carousel2.jpg'
-
+import car from './Carousel.avif';
+import car1 from './Carousel1.jpg';
+import car2 from './Carousel2.jpg';
+import car3 from './Carousel3.jpg';
 
 function Home({ setCurrentPage }) {
   return (
-    <div className="homepage">  
-   <div className="hero">
-  <div className="hero-content">
-  <div className="corner-deco corner-tl">
-  <img src={clothes} alt="Cloud" className="corner-img" />
-  <span className="corner-label">Clothes</span>
-</div>
-<div className="corner-deco corner-tr">
-  <img src={Food} alt="Clothes"className="corner-img" />
-  <span className="corner-label">Food</span>
-</div>
-<div className="corner-deco corner-bl">
-  <img src={toys} alt="Toys" className="corner-img" />
-  <span className="corner-label">Toys</span>
-</div>
-    
-   
-    <div className='imgcloud'>
-      <img src={cloud} alt="Hero Top Left" className="hero-top-left-image" style={{height: 200 , width: 300}}/>
-    </div>
-    <h1 className="glow-text">Make a Difference <br/>with<br/> Your Donations</h1>
-    <p className="typing-text">Donate items and earn rewards while helping those in need</p>
-    <button className="donate-btn">
-      Donate Now 🎁
-    </button>
-  </div>
-</div>
-     
-      
+    <div className="homepage">
+      <div className="hero">
+        <div className="hero-content">
+          <div className="corner-deco corner-tl">
+            <img src={clothes} alt="Clothes" className="corner-img" />
+            <span className="corner-label">Clothes</span>
+          </div>
+          <div className="corner-deco corner-tr">
+            <img src={Food} alt="Food" className="corner-img" />
+            <span className="corner-label">Food</span>
+          </div>
+          <div className="corner-deco corner-bl">
+            <img src={toys} alt="Toys" className="corner-img" />
+            <span className="corner-label">Toys</span>
+          </div>
+
+          <div className="imgcloud">
+            <img
+              src={cloud}
+              alt="Hero Top Left"
+              className="hero-top-left-image"
+              style={{ height: 200, width: 300 }}
+            />
+          </div>
+
+          <h1 className="glow-text">
+            Make a Difference <br /> with <br /> Your Donations
+          </h1>
+          <p className="typing-text">
+            Donate items and earn rewards while helping those in need
+          </p>
+          <button
+            className="donate-btn"
+            onClick={() => setCurrentPage('donate')}
+          >
+            Donate Now 🎁
+          </button>
+        </div>
+      </div>
+
       <div className="info-boxes">
         <div className="info-box bounce-hover">
           <div className="info-icon-wrapper">
@@ -50,7 +60,7 @@ function Home({ setCurrentPage }) {
           <p>Clothes, toys, books, and non-perishable food items</p>
           <div className="particle-burst"></div>
         </div>
-        
+
         <div className="info-box bounce-hover">
           <div className="info-icon-wrapper">
             <span className="info-icon pulse">⭐</span>
@@ -59,7 +69,7 @@ function Home({ setCurrentPage }) {
           <p>Get reward points for every donation you make</p>
           <div className="particle-burst"></div>
         </div>
-        
+
         <div className="info-box bounce-hover">
           <div className="info-icon-wrapper">
             <span className="info-icon shake">🎯</span>
@@ -68,7 +78,7 @@ function Home({ setCurrentPage }) {
           <p>See how your donations are making a difference in the community</p>
           <div className="particle-burst"></div>
         </div>
-        
+
         <div className="info-box bounce-hover">
           <div className="info-icon-wrapper">
             <span className="info-icon pop">🌟</span>
@@ -78,12 +88,12 @@ function Home({ setCurrentPage }) {
           <div className="particle-burst"></div>
         </div>
       </div>
-      
+
       <div className="fun-facts">
         <div className="fun-fact-card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <h3>Did You Know?🤔</h3>
+              <h3>Did You Know? 🤔</h3>
               <p>Click to find out!</p>
             </div>
             <div className="flip-card-back">
@@ -92,10 +102,9 @@ function Home({ setCurrentPage }) {
           </div>
         </div>
       </div>
-      
+
       <div className="features">
         <div className="feature-card">
-          
           <h3>How It Works</h3>
           <ul>
             <li>Select items to donate</li>
@@ -104,7 +113,7 @@ function Home({ setCurrentPage }) {
             <li>Earn points for each donation</li>
           </ul>
         </div>
-        
+
         <div className="feature-card">
           <h3>Rewards System</h3>
           <ul>
@@ -115,19 +124,20 @@ function Home({ setCurrentPage }) {
           </ul>
         </div>
       </div>
-      <div class="carousel">
-          <div class="track">
-          <img src= {car1} alt="1" />
-            <img src= {car} alt="2" />
-            <img src= {car2} alt="3" />
-            <img src= {car3} alt="4" />
-          
-            <img src={car} alt="1 duplicate" />
-            <img src={car1} alt="2 duplicate" />
-            <img src={car2} alt="3 duplicate" />
-            <img src={car3} alt="4 duplicate" />
-          </div>
+
+      <div className="carousel">
+        <div className="track">
+          <img src={car1} alt="1" />
+          <img src={car} alt="2" />
+          <img src={car2} alt="3" />
+          <img src={car3} alt="4" />
+          <img src={car} alt="1 duplicate" />
+          <img src={car1} alt="2 duplicate" />
+          <img src={car2} alt="3 duplicate" />
+          <img src={car3} alt="4 duplicate" />
         </div>
+      </div>
+
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
