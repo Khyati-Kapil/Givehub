@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import DonationForm from './Components/DonationForm';
 import Home from './Components/Home';
-
+import Reward from './Components/Reward';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -13,6 +13,8 @@ function App() {
       case 'donate':
         return <DonationForm />;
       ;
+      case 'reward':
+        return <Reward />;
       default:
         return <Home />;
     }
@@ -24,9 +26,12 @@ function App() {
   <div className="nav-brand">GiveHub♥︎ </div>
   <div className="nav-links">
     <button onClick={() => setCurrentPage('home')}>Home</button>
+    <button className="reward-btn"  onClick={() => setCurrentPage('reward')}>
+      My Rewards
+    </button>
     <button className="donate-btn"  onClick={() => setCurrentPage('donate')}>
       Donate Now 🎁
-    </button>
+    </button> 
 
   </div>
 </nav>

@@ -9,6 +9,7 @@ import car1 from './Carousel1.jpg';
 import car2 from './Carousel2.jpg';
 import car3 from './Carousel3.jpg';
 
+
 function Home({ setCurrentPage }) {
   return (
     <div className="homepage">
