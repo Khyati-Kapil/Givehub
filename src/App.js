@@ -3,6 +3,7 @@ import './App.css';
 import DonationForm from './Components/DonationForm';
 import Home from './Components/Home';
 import Reward from './Components/Reward';
+import History from './Components/History';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -15,6 +16,8 @@ function App() {
       ;
       case 'reward':
         return <Reward />;
+      case 'history':
+        return <History />;  
       default:
         return <Home />;
     }
@@ -26,9 +29,11 @@ function App() {
   <div className="nav-brand">GiveHub♥︎ </div>
   <div className="nav-links">
     <button onClick={() => setCurrentPage('home')}>Home</button>
+
     <button className="reward-btn"  onClick={() => setCurrentPage('reward')}>
       My Rewards
     </button>
+    <button className='history' onClick={() => setCurrentPage('history')}>My Donations</button>
     <button className="donate-btn"  onClick={() => setCurrentPage('donate')}>
       Donate Now 🎁
     </button> 

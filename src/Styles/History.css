@@ -1,0 +1,155 @@
+.history {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .history h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 15px;
+    animation: titleSlideDown 0.6s ease;
+  }
+  
+  .history h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--pastel-pink), var(--soft-blue));
+    border-radius: 2px;
+  }
+  
+  .donations-list {
+    display: grid;
+    gap: 25px;
+  }
+  
+  .card {
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardSlideUp 0.6s ease;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--pastel-pink), var(--soft-blue));
+    opacity: 0.7;
+  }
+  
+  .image {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .image img {
+    transform: scale(1.05);
+  }
+  
+  .details {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .details h3 {
+    color: var(--text-primary);
+    margin: 0 0 15px 0;
+    text-transform: capitalize;
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  
+  .details p {
+    color: var(--text-secondary);
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+  
+  .location {
+    color: var(--soft-blue);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+  }
+  
+  .date {
+    color: #999;
+    font-size: 0.9em;
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  @keyframes cardSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes titleSlideDown {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .image {
+      width: 100%;
+      height: 200px;
+    }
+  
+    .card::before {
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--pastel-pink), var(--soft-blue));
+    }
+  }
