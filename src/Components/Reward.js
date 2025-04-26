@@ -15,10 +15,10 @@ function Reward() {
     },[]);
     const nextReward = 10-(points%10);
     return (
-        <div className="reward-wallet">
+        <div className="reward">
           <h2>Your Rewards</h2>
           
-          <div className="points-section">
+          <div className="points">
             <div className="points-display">
               <h3>Total Points: {points}</h3>
               <p>{nextReward} more donations until your next reward!</p>

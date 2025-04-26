@@ -1,0 +1,250 @@
+.reward {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .reward h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 15px;
+    animation: titleSlideDown 0.6s ease;
+  }
+  
+  .reward h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--pastel-pink), var(--soft-blue));
+    border-radius: 2px;
+  }
+  
+  .points {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    animation: sectionSlideUp 0.6s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .points::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--pastel-pink), var(--soft-blue));
+    opacity: 0.05;
+    z-index: 0;
+  }
+  
+  .points-display {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .points-display h3 {
+    color: var(--soft-blue);
+    margin-bottom: 15px;
+    font-size: 2em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: numberPop 0.5s ease;
+  }
+  
+  .points-display p {
+    color: var(--text-secondary);
+    font-size: 1.1em;
+    animation: fadeIn 0.5s ease 0.2s both;
+  }
+  
+  .progress-bar {
+    background: rgba(176, 196, 222, 0.2);
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--soft-blue), #87CEEB);
+    transition: width 0.6s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+  
+  .vouchers {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: sectionSlideUp 0.6s ease 0.2s both;
+  }
+  
+  .vouchers h3 {
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  .vouchers-list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .voucher-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardPopIn 0.5s ease both;
+    border: 2px dashed var(--soft-blue);
+  }
+  
+  .voucher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(176, 196, 222, 0.3);
+  }
+  
+  .voucher-code {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--soft-blue);
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(176, 196, 222, 0.1);
+    border-radius: 10px;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .voucher-code::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+  }
+  
+  @keyframes numberPop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100%;
+      top: -100%;
+    }
+    100% {
+      left: 100%;
+      top: 100%;
+    }
+  }
+  
+  @keyframes sectionSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes cardPopIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes titleSlideDown {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -20px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
