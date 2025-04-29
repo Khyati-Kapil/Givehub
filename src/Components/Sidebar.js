@@ -13,8 +13,6 @@ function Sidebar({ onMenuItemClick, visible = true, onClose }) {
 
       </video>
 
-     
-      <button className="sidebar-close-btn" onClick={onClose} aria-label="Close sidebar">×</button>
 
       
       <div className="sidebar-brand">GiveHub♥︎</div>
@@ -24,11 +22,12 @@ function Sidebar({ onMenuItemClick, visible = true, onClose }) {
         <button className="sidebar-btn" onClick={() => onMenuItemClick('home')}>
           Home
         </button>
-        <button className="sidebar-btn" onClick={() => onMenuItemClick('history')}>
-          My Donations
-        </button>
+        
         <button className="sidebar-btn" onClick={() => onMenuItemClick('reward')}>
           My Rewards
+        </button>
+        <button className="sidebar-btn" onClick={() => onMenuItemClick('history')}>
+          My Donations
         </button>
         <button className="sidebar-btn cta-btn" onClick={() => onMenuItemClick('donate')}>
           Donate Now 🎁

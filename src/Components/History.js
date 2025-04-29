@@ -8,31 +8,38 @@ function History() {
         setDonations(stored);
     },[])
     return (
-        <div className="history">
-          <h2>Your Donation History</h2>
-          <div className="donations-list">
-            {donations.length === 0 ? (
-              <p>No donations yet.</p>
-            ) : (
-              donations.map(donation => (
-                <div key={donation.id} className="donation-card">
-                  {donation.image && (
-                    <div className="donation-image">
-                      <img src={donation.image} alt={donation.description} />
-                    </div>
-                  )}
-                  <div className="donation-details">
-                    <h3>{donation.category}</h3>
-                    <p>{donation.description}</p>
-                    <p className="location">📍 {donation.location}</p>
-                    <p className="date">{new Date(donation.date).toLocaleDateString()}</p>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
+      <div className="donation-history">
+        <div className="history-toolbar">
+          <input className="history-search" type="text" placeholder="Search your donations..." />
+          <button className="history-filter-btn">Filter</button>
         </div>
-      );
-    }
-    
-    export default History;
+        
+        
+        <h2>Your Donation History</h2>
+        <div className="donations-list">
+          {donations.length === 0 ? (
+            <p>No donations yet. Start donating to make a difference!</p>
+          ) : (
+            donations.map(donation => (
+              <div key={donation.id} className="donation-card">
+                {donation.image && (
+                  <div className="donation-image">
+                    <img src={donation.image} alt={donation.description} />
+                  </div>
+                )}
+                <div className="donation-details">
+                  <h3>{donation.category}</h3>
+                  <p>{donation.description}</p>
+                  <p className="location">📍 {donation.location}</p>
+                  <p className="date">{new Date(donation.date).toLocaleDateString()}</p>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    );
+  }
+  
+  export default History;
+  

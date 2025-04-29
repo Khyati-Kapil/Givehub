@@ -29,10 +29,13 @@
 .sidebar-brand {
   font-size: 1.8em;
   font-weight: 700;
-  color: #a779c8fd;
+  color: #8250a7fd;
+  border: #9a8fe8 1px dotted;
   margin-bottom: 2rem;
+  margin-left: 3px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
+
 }
 
 .sidebar-nav {
