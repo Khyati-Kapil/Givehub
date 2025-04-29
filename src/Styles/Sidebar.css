@@ -21,21 +21,18 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5; 
+  opacity: 0.2; /* Adjust for visibility */
   z-index: -1;
-  pointer-events: none; 
+  pointer-events: none; /* Allows button clicks through video */
 }
 
 .sidebar-brand {
   font-size: 1.8em;
   font-weight: 700;
-  color: #8250a7fd;
-  border: #9a8fe8 1px dotted;
+  color: #a779c8fd;
   margin-bottom: 2rem;
-  margin-left: 3px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .sidebar-nav {

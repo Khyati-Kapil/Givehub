@@ -126,6 +126,44 @@ function Home({ setCurrentPage }) {
         </div>
       </div>
 
+
+     
+      <section className="objectives-section">
+        <h2 className="section-title">Our Objectives</h2>
+        <div className="objectives-cards">
+          <div className="objective-row">
+            <div className="objective-card objective-gradient-1">
+              <span className="objective-icon">🌍</span>
+              <div>
+                <h3>Promote Social Good</h3>
+                <p>Encourage a culture of giving and social responsibility in our community.</p>
+              </div>
+            </div>
+          </div>
+          <div className="objective-row row-reverse">
+            <div className="objective-card objective-gradient-2">
+              <span className="objective-icon">🤝</span>
+              <div>
+                <h3>Connect Donors & Recipients</h3>
+                <p>Bridge the gap between donors and those in need for meaningful impact.</p>
+              </div>
+            </div>
+          </div>
+          <div className="objective-row">
+            <div className="objective-card objective-gradient-3">
+              <span className="objective-icon">🔄</span>
+              <div>
+                <h3>Enable Sustainable Giving</h3>
+                <p>Promote reusing and recycling items to reduce waste and support sustainability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+
       <div className="carousel">
         <div className="track">
           <img src={car1} alt="1" />
@@ -138,6 +176,7 @@ function Home({ setCurrentPage }) {
           <img src={car3} alt="4 duplicate" />
         </div>
       </div>
+
 
       <footer className="footer">
         <div className="footer-content">

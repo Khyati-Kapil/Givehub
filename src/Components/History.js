@@ -33,7 +33,9 @@ function History() {
                   <p className="location">📍 {donation.location}</p>
                   <p className="date">{new Date(donation.date).toLocaleDateString()}</p>
                 </div>
+                
               </div>
+              
             ))
           )}
         </div>
