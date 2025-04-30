@@ -32,7 +32,7 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
           )}
         </div>
         <div className="hero-content">
-          <div className="corner-deco corner-tl">A
+          <div className="corner-deco corner-tl">
             <img src={clothes} alt="Clothes" className="corner-img" />
             <span className="corner-label">Clothes</span>
           </div>
