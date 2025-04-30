@@ -21,9 +21,14 @@ function App() {
 
   const handleLogin = async () => {
     try {
-      await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(auth, provider);
+      if (!result.user) {
+        alert('Login failed: No user returned from provider.');
+        console.error('No user object returned from signInWithPopup:', result);
+      }
     } catch (err) {
       alert('Login failed: ' + err.message);
+      console.error('Login error:', err);
     }
   };
 
@@ -32,8 +37,10 @@ function App() {
       await signOut(auth);
     } catch (err) {
       alert('Logout failed: ' + err.message);
+      console.error('Logout error:', err);
     }
   };
+
 
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
