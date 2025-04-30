@@ -2,7 +2,6 @@
   "name": "donation-rewards-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Khyati-Kapil/Donation_app_react",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
