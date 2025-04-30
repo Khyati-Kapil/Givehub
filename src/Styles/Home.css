@@ -579,13 +579,13 @@ html, body {
   border-top-right-radius: 18px;
 }
 .impact-img-1 {
-  background-image: url("/Users/khyati/Desktop/donation-rewards-app/src/Components/Carousel2.jpg");
+  background-image: url("../Components/Carousel2.jpg");
 }
 .impact-img-2 {
-  background-image: url('/Users/khyati/Desktop/donation-rewards-app/src/Components/Carousel1.jpg');
+  background-image: url('../Components/Carousel1.jpg');
 }
 .impact-img-3 {
-  background-image: url('/Users/khyati/Desktop/donation-rewards-app/src/Components/books.jpg');
+  background-image: url('../Components/books.jpg');
 }
 .impact-content {
   padding: 20px 18px 18px 18px;
