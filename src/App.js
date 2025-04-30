@@ -4,7 +4,7 @@ import DonationForm from './Components/DonationForm';
 import Home from './Components/Home';
 import GetStarted from './Components/GetStarted';
 import { auth, provider } from './firebase';
-import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
+import { signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged } from 'firebase/auth';
 import Reward from './Components/Reward';
 import History from './Components/History';
 import Sidebar from './Components/Sidebar';
@@ -21,16 +21,22 @@ function App() {
 
   const handleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, provider);
-      if (!result.user) {
-        alert('Login failed: No user returned from provider.');
-        console.error('No user object returned from signInWithPopup:', result);
+      
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        const result = await signInWithPopup(auth, provider);
+        if (!result.user) {
+          alert('Login failed: No user returned from provider.');
+          console.error('No user object returned from signInWithPopup:', result);
+        }
+      } else {
+        await signInWithRedirect(auth, provider);
       }
     } catch (err) {
       alert('Login failed: ' + err.message);
       console.error('Login error:', err);
     }
   };
+
 
   const handleLogout = async () => {
     try {
