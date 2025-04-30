@@ -5,7 +5,7 @@ import '../Styles/GetStarted.css';
 const GetStarted = ({ onGetStarted, onLogin, user }) => {
   return (
     <div className="get-started-container">
-      <video className="get-started-bg-video" autoPlay loop muted playsInline>
+      <video className="get-started-bg-video" autoPlay loop muted playsInline preload="metadata">
         <source src="/sidebar-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

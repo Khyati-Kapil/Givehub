@@ -23,7 +23,7 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
         <div className="hero-login-wrapper">
           {user ? (
             <div className="user-info">
-              <img src={user.photoURL} alt={user.displayName} className="user-avatar" />
+              <img src={user.photoURL} alt={user.displayName} className="user-avatar" loading="lazy" />
               <span className="user-name">{user.displayName}</span>
               <button className="home-login-btn" onClick={onLogout}>Logout</button>
             </div>
