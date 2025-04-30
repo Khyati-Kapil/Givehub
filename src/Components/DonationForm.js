@@ -25,7 +25,7 @@ const handleImage=(e)=>{
           setImage(reader.result);
           setformData(prev=>({
             ...prev,
-            image: reader.result // store base64 string instead of File object
+            image: reader.result
           }));
         };
         reader.readAsDataURL(file);

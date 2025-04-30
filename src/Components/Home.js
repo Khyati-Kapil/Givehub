@@ -10,9 +10,26 @@ import car2 from './Carousel2.jpg';
 import car3 from './Carousel3.jpg';
 
 
-function Home({ setCurrentPage }) {
+function Home({ setCurrentPage, user, onLogin, onLogout }) {
+  // Debug logging to verify props
+  console.log('Home props:', { user, onLogin, onLogout });
+
+  // Fallback for onLogin if not passed
+  const handleLogin = onLogin || (() => alert('Login function not provided!'));
+
   return (
     <div className="homepage">
+      <div className="home-login-bar">
+        {user ? (
+          <div className="user-info">
+            <img src={user.photoURL} alt={user.displayName} className="user-avatar" />
+            <span className="user-name">{user.displayName}</span>
+            <button className="home-login-btn" onClick={onLogout}>Logout</button>
+          </div>
+        ) : (
+          <button className="home-login-btn" onClick={handleLogin}>Login</button>
+        )}
+      </div>
       <div className="hero">
         <div className="hero-content">
           <div className="corner-deco corner-tl">
@@ -207,3 +224,4 @@ function Home({ setCurrentPage }) {
 }
 
 export default Home;
+
