@@ -15,7 +15,7 @@ const GetStarted = ({ onGetStarted, onLogin, user }) => {
         <h1 className="get-started-title">Welcome to GiveHub♥︎</h1>
         <p className="get-started-description">
           Make a difference by donating and earn exciting rewards!<br />
-          Join our community of generous donors and start your journey today.
+          Join our community of generous donors and start your journey today
         </p>
         <button className="get-started-btn" onClick={onGetStarted}>
           Get Started
