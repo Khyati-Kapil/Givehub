@@ -15,7 +15,7 @@
   height: 100vh;
   object-fit: cover;
   z-index: 0;
-  filter: brightness(0.5) blur(1px);
+  filter: brightness(0.6) blur(1px);
 }
 
 .get-started-container::after {
@@ -59,7 +59,7 @@
   display: block;
   margin: 0 auto 16px auto;
 
-  background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(90deg, #bc65f6 0%, #fda085 100%);
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
@@ -72,7 +72,7 @@
 }
 
 .get-started-btn:hover {
-  background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+  background: linear-gradient(90deg, #fda085 0%, #bc65f6 100%);
   transform: translateY(-2px) scale(1.03);
 }
 
@@ -87,14 +87,26 @@
   transform: translateY(-2px) scale(1.03);
 }
 
-/* Home page login bar styles */
+
 .home-login-bar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 16px 32px 0 32px;
-  background: transparent;
+  
+  display: none;
+}
+
+.hero-login-wrapper {
+  position: absolute;
+  top: 24px;
+  right: 36px;
   z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .hero-login-wrapper {
+    top: 12px;
+    right: 12px;
+  }
 }
 
 .home-login-btn {
@@ -109,6 +121,7 @@
   transition: background 0.2s, transform 0.2s;
   margin-left: 16px;
 }
+
 
 .home-login-btn:hover {
   background: linear-gradient(90deg, #6dd5ed 0%, #2193b0 100%);

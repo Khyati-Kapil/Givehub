@@ -11,28 +11,28 @@ import car3 from './Carousel3.jpg';
 
 
 function Home({ setCurrentPage, user, onLogin, onLogout }) {
-  // Debug logging to verify props
+ 
   console.log('Home props:', { user, onLogin, onLogout });
 
-  // Fallback for onLogin if not passed
-  const handleLogin = onLogin || (() => alert('Login function not provided!'));
+
+  const handleLogin = onLogin ;
 
   return (
     <div className="homepage">
-      <div className="home-login-bar">
-        {user ? (
-          <div className="user-info">
-            <img src={user.photoURL} alt={user.displayName} className="user-avatar" />
-            <span className="user-name">{user.displayName}</span>
-            <button className="home-login-btn" onClick={onLogout}>Logout</button>
-          </div>
-        ) : (
-          <button className="home-login-btn" onClick={handleLogin}>Login</button>
-        )}
-      </div>
       <div className="hero">
+        <div className="hero-login-wrapper">
+          {user ? (
+            <div className="user-info">
+              <img src={user.photoURL} alt={user.displayName} className="user-avatar" />
+              <span className="user-name">{user.displayName}</span>
+              <button className="home-login-btn" onClick={onLogout}>Logout</button>
+            </div>
+          ) : (
+            <button className="home-login-btn" onClick={handleLogin}>Login</button>
+          )}
+        </div>
         <div className="hero-content">
-          <div className="corner-deco corner-tl">
+          <div className="corner-deco corner-tl">A
             <img src={clothes} alt="Clothes" className="corner-img" />
             <span className="corner-label">Clothes</span>
           </div>

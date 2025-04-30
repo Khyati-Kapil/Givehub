@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Styles/Sidebar.css';
-import '../Styles/SidebarToggle.css';
+
 
 function Sidebar({ onMenuItemClick, visible = true, onClose }) {
   if (!visible) return null;

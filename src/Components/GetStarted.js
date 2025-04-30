@@ -1,5 +1,5 @@
 import React from 'react';
-import './GetStarted.css';
+import '../Styles/GetStarted.css';
 
 
 const GetStarted = ({ onGetStarted, onLogin, user }) => {

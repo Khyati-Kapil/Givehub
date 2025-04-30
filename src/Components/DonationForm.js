@@ -41,7 +41,7 @@ const handleImage=(e)=>{
     const existingDonation = JSON.parse(localStorage.getItem('donations') || '[]');    
     localStorage.setItem('donations', JSON.stringify([...existingDonation, donation]));  
 
-    // Update reward points
+    
     const prevPoints = parseInt(localStorage.getItem('points') || '0', 10);
     localStorage.setItem('points', prevPoints + 1);
    
