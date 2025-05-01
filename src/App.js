@@ -19,8 +19,8 @@ function App() {
     return () => unsubscribe();
   }, []);
 
-  // Handle Firebase redirect login result
-  useEffect(() => {
+  // Restore getRedirectResult logic for production login
+  React.useEffect(() => {
     getRedirectResult(auth)
       .then((result) => {
         if (result && result.user) {
