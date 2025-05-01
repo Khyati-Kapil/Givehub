@@ -4,7 +4,7 @@ import DonationForm from './Components/DonationForm';
 import Home from './Components/Home';
 import GetStarted from './Components/GetStarted';
 import { auth, provider } from './firebase';
-import { signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged } from 'firebase/auth';
+import { signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged, getRedirectResult } from 'firebase/auth';
 import Reward from './Components/Reward';
 import History from './Components/History';
 import Sidebar from './Components/Sidebar';
@@ -17,6 +17,21 @@ function App() {
       setUser(u);
     });
     return () => unsubscribe();
+  }, []);
+
+  // Handle Firebase redirect login result
+  useEffect(() => {
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result && result.user) {
+          setUser(result.user);
+        }
+      })
+      .catch((error) => {
+        if (error && error.message) {
+          console.error('Redirect login failed:', error.message);
+        }
+      });
   }, []);
 
   const handleLogin = async () => {
