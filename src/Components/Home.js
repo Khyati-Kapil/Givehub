@@ -10,6 +10,13 @@ import car2 from './Carousel2.jpg';
 import car3 from './Carousel3.jpg';
 
 
+const SOCIAL_LINKS = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/YOUR_PROFILE" },
+  { name: "GitHub", url: "https://github.com/YOUR_USERNAME" },
+  { name: "Instagram", url: "https://instagram.com/YOUR_USERNAME" }
+  // Add more as needed
+];
+
 function Home({ setCurrentPage, user, onLogin, onLogout }) {
  
   console.log('Home props:', { user, onLogin, onLogout });
@@ -209,10 +216,12 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
           <div className="footer-section">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <span>LinkedIn</span>
-              <span>GitHub</span>
-              <span>Instagram</span>
-            </div>
+  {SOCIAL_LINKS.map(link => (
+    <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer">
+      {link.name}
+    </a>
+  ))}
+</div>
           </div>
         </div>
         <div className="footer-bottom">
