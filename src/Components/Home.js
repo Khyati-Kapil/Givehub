@@ -11,10 +11,10 @@ import car3 from './Carousel3.jpg';
 
 
 const SOCIAL_LINKS = [
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/YOUR_PROFILE" },
-  { name: "GitHub", url: "https://github.com/YOUR_USERNAME" },
-  { name: "Instagram", url: "https://instagram.com/YOUR_USERNAME" }
-  // Add more as needed
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/khyati-kapil-a72335339/" },
+  { name: "GitHub", url: "https://github.com/Khyati-Kapil" },
+  { name: "Instagram", url: "https://www.instagram.com/khyati.k_/?next=%2F" }
+ 
 ];
 
 function Home({ setCurrentPage, user, onLogin, onLogout }) {
@@ -217,7 +217,7 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
             <h4>Follow Us</h4>
             <div className="social-links">
   {SOCIAL_LINKS.map(link => (
-    <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer">
+    <a key={link.name} href={link.url} target="_blank" >
       {link.name}
     </a>
   ))}
