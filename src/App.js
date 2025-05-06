@@ -11,16 +11,19 @@ import Sidebar from './Components/Sidebar';
 
 function App() {
   const [user, setUser] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
 
+  // Wait for both getRedirectResult and onAuthStateChanged before setting loading to false
   React.useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
-      setUser(u);
-    });
-    return () => unsubscribe();
-  }, []);
+    let resolvedRedirect = false;
+    let resolvedAuth = false;
 
-  // Restore getRedirectResult logic for production login
-  React.useEffect(() => {
+    // Helper to finish loading only when both are done
+    function finishLoading() {
+      if (resolvedRedirect && resolvedAuth) setLoading(false);
+    }
+
+    // 1. Handle redirect result
     getRedirectResult(auth)
       .then((result) => {
         if (result && result.user) {
@@ -31,7 +34,19 @@ function App() {
         if (error && error.message) {
           console.error('Redirect login failed:', error.message);
         }
+      })
+      .finally(() => {
+        resolvedRedirect = true;
+        finishLoading();
       });
+
+    // 2. Listen to auth state
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
+      resolvedAuth = true;
+      finishLoading();
+    });
+    return () => unsubscribe();
   }, []);
 
   const handleLogin = async () => {
@@ -118,6 +133,16 @@ function App() {
       scrollToFooterRef.current = false;
     }
   }, [currentPage]);
+
+  if (loading) {
+    return (
+      <div className="App">
+        <div style={{textAlign: 'center', marginTop: '20vh', fontSize: 24}}>
+          Loading...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="App">
