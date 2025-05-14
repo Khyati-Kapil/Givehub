@@ -13,17 +13,17 @@ function App() {
   const [user, setUser] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
-  // Wait for both getRedirectResult and onAuthStateChanged before setting loading to false
+  
   React.useEffect(() => {
     let resolvedRedirect = false;
     let resolvedAuth = false;
 
-    // Helper to finish loading only when both are done
+    
     function finishLoading() {
       if (resolvedRedirect && resolvedAuth) setLoading(false);
     }
 
-    // 1. Handle redirect result
+   
     getRedirectResult(auth)
       .then((result) => {
         if (result && result.user) {
@@ -40,7 +40,7 @@ function App() {
         finishLoading();
       });
 
-    // 2. Listen to auth state
+   
     const unsubscribe = onAuthStateChanged(auth, (u) => {
       setUser(u);
       resolvedAuth = true;
