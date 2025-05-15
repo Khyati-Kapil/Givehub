@@ -35,8 +35,6 @@ const handleImage=(e)=>{
         e.preventDefault();
         const donation={
             ...formData,
-            date: new Date().toISOString(),
-            id: Date.now()
           };
     const existingDonation = JSON.parse(localStorage.getItem('donations') || '[]');    
     localStorage.setItem('donations', JSON.stringify([...existingDonation, donation]));  
