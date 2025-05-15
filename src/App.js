@@ -13,17 +13,17 @@ function App() {
   const [user, setUser] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
-  
+ 
   React.useEffect(() => {
     let resolvedRedirect = false;
     let resolvedAuth = false;
 
-    
+   
     function finishLoading() {
       if (resolvedRedirect && resolvedAuth) setLoading(false);
     }
 
-   
+  
     getRedirectResult(auth)
       .then((result) => {
         if (result && result.user) {
@@ -40,7 +40,7 @@ function App() {
         finishLoading();
       });
 
-   
+
     const unsubscribe = onAuthStateChanged(auth, (u) => {
       setUser(u);
       resolvedAuth = true;
@@ -106,7 +106,7 @@ function App() {
     }
   };
 
-  const scrollToFooterRef = useRef(false);
+ 
 
   const handleMenuItemClick = (id) => {
     if (id === 'contact') {
@@ -115,9 +115,6 @@ function App() {
         if (footer) {
           footer.scrollIntoView({ behavior: 'smooth' });
         }
-      } else {
-        scrollToFooterRef.current = true;
-        setCurrentPage('home');
       }
     } else {
       setCurrentPage(id);
@@ -125,12 +122,12 @@ function App() {
   };
 
   useEffect(() => {
-    if (currentPage === 'home' && scrollToFooterRef.current) {
+    if (currentPage === 'home' ) {
       const footer = document.getElementById('footer');
       if (footer) {
         footer.scrollIntoView({ behavior: 'smooth' });
       }
-      scrollToFooterRef.current = false;
+     
     }
   }, [currentPage]);
 
@@ -146,22 +143,11 @@ function App() {
 
   return (
     <div className="App">
-      {!sidebarOpen && (
-        <button
-          className="sidebar-hamburger-btn"
-          onClick={() => setSidebarOpen(true)}
-          aria-label="Open sidebar"
-          style={{ position: 'fixed', top: 20, left: 20, zIndex: 300, fontSize: 28, background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          ☰
-        </button>
-      )}
+      
       <Sidebar
         menuItems={menuItems}
         onMenuItemClick={handleMenuItemClick}
         currentPage={currentPage}
-        visible={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
       />
       <main className="main-content sidebar-offset">
         {renderPage()}
