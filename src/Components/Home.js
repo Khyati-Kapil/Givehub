@@ -71,43 +71,35 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
             className="donate-btn"
             onClick={() => setCurrentPage('donate')}
           >
-            Donate Now 🎁
+            Donate Now 
           </button>
         </div>
       </div>
 
       <div className="info-boxes">
         <div className="info-box bounce-hover">
-          <div className="info-icon-wrapper">
-            <span className="info-icon rotating">🎁</span>
-          </div>
+          
           <h3>Items Needed</h3>
           <p>Clothes, toys, books, and non-perishable food items</p>
           <div className="particle-burst"></div>
         </div>
 
         <div className="info-box bounce-hover">
-          <div className="info-icon-wrapper">
-            <span className="info-icon pulse">⭐</span>
-          </div>
+          
           <h3>Earn Points</h3>
           <p>Get reward points for every donation you make</p>
           <div className="particle-burst"></div>
         </div>
 
         <div className="info-box bounce-hover">
-          <div className="info-icon-wrapper">
-            <span className="info-icon shake">🎯</span>
-          </div>
+          
           <h3>Track Impact</h3>
           <p>See how your donations are making a difference in the community</p>
           <div className="particle-burst"></div>
         </div>
 
         <div className="info-box bounce-hover">
-          <div className="info-icon-wrapper">
-            <span className="info-icon pop">🌟</span>
-          </div>
+          
           <h3>Get Rewards</h3>
           <p>Unlock special vouchers and discounts with your donation points</p>
           <div className="particle-burst"></div>
@@ -118,7 +110,7 @@ function Home({ setCurrentPage, user, onLogin, onLogout }) {
         <div className="fun-fact-card flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <h3>Did You Know? 🤔</h3>
+              <h3>Did You Know? </h3>
               <p>Click to find out!</p>
             </div>
             <div className="flip-card-back">
