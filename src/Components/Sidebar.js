@@ -30,7 +30,7 @@ function Sidebar({ onMenuItemClick, visible = true, onClose }) {
           My Donations
         </button>
         <button className="sidebar-btn cta-btn" onClick={() => onMenuItemClick('donate')}>
-          Donate Now 🎁
+          Donate Now 
         </button>
       </nav>
     </aside>
